@@ -21,10 +21,10 @@ class LatLng {
         ),
       );
     } catch (e) {
-      // due to 'Bad state: Distance calculation faild to converge!' error
-      // which is thrown when not using Haversine(). Haversine() is less accurate though
+      // due to 'Bad state: Distance calculation faild to converge!' error.
+      // which is thrown when not using Haversine(). Haversine() is less accurate though.
       // example airport which triggers this error: RPVV
-      logger.e(e);
+      developer.log('error', name: 'LatLng.distanceTo', error: e);
       return Length.zero;
     }
   }

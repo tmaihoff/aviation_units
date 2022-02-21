@@ -3,8 +3,9 @@
 import 'dart:math';
 
 import 'package:aviation_units/aviation_units.dart';
-import 'package:shared_dart/shared_dart.dart';
 import 'package:test/test.dart';
+
+import 'test_utils.dart';
 // ignore_for_file: prefer_const_constructors
 
 void main() {
