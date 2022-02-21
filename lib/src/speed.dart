@@ -68,11 +68,3 @@ class Speed extends Value<Speed> {
   factory Speed.fromJson(Map<String, dynamic> json) =>
       Speed.fromSi(Value._parseJson<Speed>(json));
 }
-
-Speed lerpSpeed(Speed a, Speed b, double t) => Speed(
-      mps: lerpDouble(
-        a.mps,
-        b.mps,
-        t,
-      ),
-    );

@@ -27,11 +27,3 @@ class Pitch extends Angle {
   factory Pitch.fromJson(Map<String, dynamic> json) =>
       Pitch.fromSi(Value._parseJson<Pitch>(json));
 }
-
-Pitch lerpPitch(Pitch a, Pitch b, double t) => Pitch(
-      rad: lerpDouble(
-        a.rad,
-        b.rad,
-        t,
-      ),
-    );

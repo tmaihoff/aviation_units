@@ -86,11 +86,3 @@ class Angle extends Value<Angle> {
   factory Angle.fromJson(Map<String, dynamic> json) =>
       Angle.fromSi(Value._parseJson<Angle>(json));
 }
-
-Angle lerpAngle(Angle a, Angle b, double t) => Angle(
-      rad: lerpDouble(
-        a.rad,
-        b.rad,
-        t,
-      ),
-    );

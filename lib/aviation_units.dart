@@ -3,7 +3,6 @@ library aviation_units;
 import 'dart:developer' as developer;
 import 'dart:math';
 
-import 'package:aviation_units/src/utils.dart';
 import 'package:intl/intl.dart';
 import 'package:latlong2/latlong.dart' as pub;
 

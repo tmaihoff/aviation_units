@@ -55,14 +55,3 @@ class Heading extends Angle {
   factory Heading.fromJson(Map<String, dynamic> json) =>
       Heading.fromSi(Value._parseJson<Heading>(json));
 }
-
-Heading lerpHeading(Heading a, Heading b, double t) {
-  final diff = b - a; // lerp the right direction
-  return Heading(
-    rad: lerpDouble(
-      a.rad,
-      a.rad + diff.rad,
-      t,
-    ),
-  );
-}

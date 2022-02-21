@@ -52,11 +52,3 @@ class Length extends Value<Length> {
   factory Length.fromJson(Map<String, dynamic> json) =>
       Length.fromSi(Value._parseJson<Length>(json));
 }
-
-Length lerpLength(Length a, Length b, double t) => Length(
-      m: lerpDouble(
-        a.m,
-        b.m,
-        t,
-      ),
-    );

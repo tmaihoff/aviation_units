@@ -98,16 +98,3 @@ class LatLng {
   @override
   int get hashCode => latitude.hashCode ^ longitude.hashCode;
 }
-
-LatLng lerpLatLng(LatLng a, LatLng b, double t) => LatLng(
-      lerpDouble(
-        a.latitude,
-        b.latitude,
-        t,
-      ),
-      lerpDouble(
-        a.longitude,
-        b.longitude,
-        t,
-      ),
-    );

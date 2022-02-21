@@ -24,14 +24,3 @@ class Bank extends Angle {
   factory Bank.fromJson(Map<String, dynamic> json) =>
       Bank.fromSi(Value._parseJson<Bank>(json));
 }
-
-Bank lerpBank(Bank a, Bank b, double t) {
-  final diff = b - a; // lerp the right direction
-  return Bank(
-    rad: lerpDouble(
-      a.rad,
-      a.rad + diff.rad,
-      t,
-    ),
-  );
-}
