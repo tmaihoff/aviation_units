@@ -6,6 +6,8 @@ import 'dart:math';
 import 'package:intl/intl.dart';
 import 'package:latlong2/latlong.dart' as pub;
 
+export 'src/lerp_functions.dart';
+
 part 'src/angle.dart';
 part 'src/bank.dart';
 part 'src/heading.dart';
