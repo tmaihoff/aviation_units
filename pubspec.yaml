@@ -1,0 +1,14 @@
+name: aviation_units
+
+environment:
+  sdk: ">=2.14.0<3.0.0"
+
+dependencies:
+  intl: ^0.17.0
+  latlong2: ^0.8.1
+  lint: ^1.8.2
+  shared_dart:
+    path: ../shared_dart
+
+dev_dependencies:
+  test: ^1.16.8
