@@ -52,13 +52,17 @@ class LatLng {
   }
 
   LatLng offset(Heading bearing, Length distance) {
-    final newLatLng = const pub.Distance().offset(
-      pub.LatLng(latitude, longitude),
-      distance.m,
-      bearing.deg,
-    );
-
-    return LatLng(newLatLng.latitude, newLatLng.longitude);
+    try {
+      final newLatLng = const pub.Distance().offset(
+        pub.LatLng(latitude, longitude),
+        distance.m,
+        bearing.deg,
+      );
+      return LatLng(newLatLng.latitude, newLatLng.longitude);
+    } catch (e) {
+      developer.log('error', name: 'LatLng.offset', error: e);
+      return LatLng(latitude, longitude);
+    }
   }
 
   /// Returns the equivilant object from the latlong2 package
