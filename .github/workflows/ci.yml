@@ -31,10 +31,14 @@ jobs:
       - name: Flutter doctor
         run: flutter doctor
 
-      - name: Testing main project 
-        run: flutter test test
-
       - name: Analyzing main project 
         run: flutter analyze lib
 
+      - name: Run tests
+        run: flutter test --coverage
+
+      - name: Upload to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          file: coverage/lcov.info
 
