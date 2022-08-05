@@ -7,7 +7,9 @@ class LatLng {
   const LatLng(
     this.latitude,
     this.longitude,
-  );
+  )   : assert(latitude <= 90 && latitude >= -90, 'latitude exceeded bounds'),
+        assert(
+            longitude <= 180 && longitude >= -180, 'longitude exceeded bounds');
 
   static const zero = LatLng(0.0, 0.0);
 
@@ -65,7 +67,7 @@ class LatLng {
     }
   }
 
-  /// Returns the equivilant object from the latlong2 package
+  /// Returns the equivalent object from the latlong2 package
   pub.LatLng get latlong2 => pub.LatLng(latitude, longitude);
 
   @override
