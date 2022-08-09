@@ -19,7 +19,7 @@ abstract class Value<T extends Value<T>> implements Comparable<T> {
   T operator %(final double other) => _constructBySi(si % other);
 
   @override
-  bool operator ==(final dynamic other) => other is T && si == other.si;
+  bool operator ==(final Object other) => other is T && si == other.si;
   bool operator >(final T other) => si > other.si;
   bool operator >=(final T other) => si >= other.si;
   bool operator <(final T other) => si < other.si;
