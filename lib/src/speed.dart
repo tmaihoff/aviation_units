@@ -23,8 +23,8 @@ class Speed extends Value<Speed> {
   static const double mps2ftpm = 1 / ftpm2mps;
 
   @override
-  Speed _constructBySi(double _si) {
-    return Speed.fromSi(_si);
+  Speed _constructBySi(double si) {
+    return Speed.fromSi(si);
   }
 
   const Speed({

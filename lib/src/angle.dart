@@ -5,8 +5,8 @@ class Angle extends Value<Angle> {
   static const double rad2deg = 1 / deg2rad;
 
   @override
-  Angle _constructBySi(double _si) {
-    return Angle.fromSi(_si);
+  Angle _constructBySi(double si) {
+    return Angle.fromSi(si);
   }
 
   /// Angle with value 0.

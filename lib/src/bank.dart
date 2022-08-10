@@ -1,7 +1,7 @@
 part of aviation_units;
 
 class Bank extends Angle {
-  const Bank({double rad = 0, double deg = 0}) : super(rad: rad, deg: deg);
+  const Bank({super.rad = 0, super.deg = 0});
 
   factory Bank.fromSi(double angle) => Bank(rad: angle);
 
@@ -16,7 +16,7 @@ class Bank extends Angle {
   double get rad => super.fromM180To180.rad;
 
   @override
-  Angle operator -(final Angle other) => Angle.diff(this, other);
+  Angle operator -(Angle other) => Angle.diff(this, other);
 
   @override
   Map<String, dynamic> toJson() => <String, dynamic>{'type': '$Bank', 'si': si};

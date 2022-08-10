@@ -1,7 +1,7 @@
 part of aviation_units;
 
 class Pitch extends Angle {
-  const Pitch({double rad = 0, double deg = 0}) : super(rad: rad, deg: deg);
+  const Pitch({super.rad = 0, super.deg = 0});
 
   factory Pitch.fromSi(double angle) => Pitch(rad: angle);
 

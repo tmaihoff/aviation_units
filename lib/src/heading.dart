@@ -1,7 +1,7 @@
 part of aviation_units;
 
 class Heading extends Angle {
-  const Heading({double rad = 0, double deg = 0}) : super(rad: rad, deg: deg);
+  const Heading({super.rad = 0, super.deg = 0});
   factory Heading.fromSi(double angle) => Heading(rad: angle);
 
   factory Heading.randomInt() =>
@@ -28,7 +28,7 @@ class Heading extends Angle {
       Heading(rad: this.rad - rad, deg: -deg);
 
   @override
-  Angle operator -(final Angle other) => diff(rad, other.rad);
+  Angle operator -(Angle other) => diff(rad, other.rad);
 
   /// Calculates the Angle difference between the given headings which are given in rad.
   /// first minus second

@@ -10,20 +10,20 @@ abstract class Value<T extends Value<T>> implements Comparable<T> {
   /// Override is only enforced when 'part of aviation_units' is used.
   T _constructBySi(double si);
 
-  T operator +(final T other) => _constructBySi(si + other.si);
-  T operator -(final T other) => _constructBySi(si - other.si);
-  T operator *(final double factor) => _constructBySi(si * factor);
-  T operator /(final double divisor) => _constructBySi(si / divisor);
+  T operator +(T other) => _constructBySi(si + other.si);
+  T operator -(T other) => _constructBySi(si - other.si);
+  T operator *(double factor) => _constructBySi(si * factor);
+  T operator /(double divisor) => _constructBySi(si / divisor);
   T operator -() => _constructBySi(-si);
 
-  T operator %(final double other) => _constructBySi(si % other);
+  T operator %(double other) => _constructBySi(si % other);
 
   @override
-  bool operator ==(final Object other) => other is T && si == other.si;
-  bool operator >(final T other) => si > other.si;
-  bool operator >=(final T other) => si >= other.si;
-  bool operator <(final T other) => si < other.si;
-  bool operator <=(final T other) => si <= other.si;
+  bool operator ==(Object other) => other is T && si == other.si;
+  bool operator >(T other) => si > other.si;
+  bool operator >=(T other) => si >= other.si;
+  bool operator <(T other) => si < other.si;
+  bool operator <=(T other) => si <= other.si;
 
   T abs() => _constructBySi(si.abs());
 
