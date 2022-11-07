@@ -43,7 +43,7 @@ void main() {
     test('range of random factory', () {
       for (var i = 0; i < 10000; i++) {
         expect(
-          Speed.random(max: const Speed(mps: 1000)).mps,
+          Speed.random(min: Speed.zero, max: const Speed(mps: 1000)).mps,
           inExclusiveRange(0, 1000),
         );
       }

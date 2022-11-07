@@ -45,8 +45,8 @@ class Speed extends Value<Speed> {
   /// Constructs a speed based on si value. Si unit is meter per second.
   factory Speed.fromSi(double speed) => Speed(mps: speed);
 
-  factory Speed.random({required Speed max}) =>
-      Speed.fromSi(Random().nextDouble() * max.si);
+  factory Speed.random({required Speed min, required Speed max}) =>
+      Speed.fromSi(Random().nextDouble() * (max - min).si + min.si);
 
   /// This speed in meters per second.
   double get mps => si;
