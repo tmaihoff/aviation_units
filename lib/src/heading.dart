@@ -28,14 +28,7 @@ class Heading extends Angle {
       Heading(rad: this.rad - rad, deg: -deg);
 
   @override
-  Angle operator -(Angle other) => diff(rad, other.rad);
-
-  /// Calculates the Angle difference between the given headings which are given in rad.
-  /// first minus second
-  /// Source: https://stackoverflow.com/a/2007279/8539278
-  static Angle diff(double first, double second) {
-    return Angle(rad: atan2(sin(first - second), cos(first - second)));
-  }
+  Angle operator -(Angle other) => Angle.diff(this, other);
 
   @override
 
