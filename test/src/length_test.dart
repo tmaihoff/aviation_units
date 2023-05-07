@@ -44,5 +44,15 @@ void main() {
       expect(Length(m: 2).toJson(), {'type': 'Length', 'si': 2});
       expect(Length.fromJson(Length(m: 1).toJson()), Length(m: 1));
     });
+
+    test('from duration and speed', () {
+      expect(
+        Length.fromDurationAndSpeed(
+          duration: const Duration(seconds: 1),
+          speed: const Speed(mps: 1),
+        ),
+        const Length(m: 1),
+      );
+    });
   });
 }

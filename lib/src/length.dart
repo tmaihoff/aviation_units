@@ -32,6 +32,12 @@ class Length extends Value<Length> {
   /// Constructs a length based on si value. Si unit is meters.
   factory Length.fromSi(double si) => Length(m: si);
 
+  factory Length.fromDurationAndSpeed({
+    required Duration duration,
+    required Speed speed,
+  }) =>
+      Length(m: duration.inMilliseconds / 1000 * speed.mps);
+
   /// This length in meters.
   double get m => si;
 
