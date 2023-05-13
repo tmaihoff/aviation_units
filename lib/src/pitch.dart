@@ -1,4 +1,4 @@
-part of aviation_units;
+part of '../aviation_units.dart';
 
 class Pitch extends Angle {
   const Pitch({super.rad = 0, super.deg = 0});

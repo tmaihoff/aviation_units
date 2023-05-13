@@ -1,4 +1,4 @@
-part of aviation_units;
+part of '../aviation_units.dart';
 
 class Length extends Value<Length> {
   // Soruce: https://en.wikipedia.org/wiki/Conversion_of_units#Length

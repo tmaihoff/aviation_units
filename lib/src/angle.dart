@@ -1,4 +1,4 @@
-part of aviation_units;
+part of '../aviation_units.dart';
 
 class Angle extends Value<Angle> {
   static const double deg2rad = pi / 180;

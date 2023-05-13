@@ -1,4 +1,4 @@
-part of aviation_units;
+part of '../aviation_units.dart';
 
 class LatLng {
   final double latitude;

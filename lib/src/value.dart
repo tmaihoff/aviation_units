@@ -1,4 +1,4 @@
-part of aviation_units;
+part of '../aviation_units.dart';
 
 abstract class Value<T extends Value<T>> implements Comparable<T> {
   /// Basic constructor
